@@ -1,1 +1,1 @@
-## AHD Kuro stylesheet
+## Stylesheets for various sites
