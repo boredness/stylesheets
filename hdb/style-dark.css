@@ -1,35 +1,50 @@
-body {
-	margin: 2px;
-	background-color: #16181d; /* Base dark background */
-	color: #cccccc;            /* Base light text */
+body, html {
+	background-color: #16181d !important; 
+	color: #cccccc !important;
 }
 
-/*body, input, select, textarea, button {
-	font-family: 'Yu Gothic UI', tahoma, arial, helvetica, sans-serif
-}*/
+a, a:link, a:visited {
+	color: #9ba4b5 !important;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #cdd4e0 !important;
+	text-decoration: underline;
+}
+
+table, table.main, table.main > tbody > tr > td,
+table.tableb, table.tableb > tbody > tr > td,
+.colhead, td.colhead, th {
+	background-color: #22252b !important;
+	border-color: #111111 !important;
+	color: #cccccc !important;
+}
+
+body {
+	margin: 2px;
+}
 
 html, .footer {
 	background: none;
 	padding-bottom: 5px;
 }
 
-h1.left, /* "Votes" & "Comments" in request details */
-td.bottom > span.tag.internal, /* internal tag in torrent details */
-.bannertext, /* tv shows without a banner @ tv recommendations */
-#filmstatboxes, /* old film tab */
-table.readpost > tbody > tr:nth-child(1) > td:nth-child(1) > p, table.std-content > tbody > tr > td > table.main > tbody > tr:nth-child(1) > td:nth-child(1) > p, /* user info under avatars on the forum */
-table.readpost > tbody > tr:nth-child(2), table.std-content > tbody > tr > td > table.main > tbody > tr:nth-child(2) { /* links under forum posts */
+h1.left,
+td.bottom > span.tag.internal,
+.bannertext,
+#filmstatboxes,
+table.readpost > tbody > tr:nth-child(1) > td:nth-child(1) > p, table.std-content > tbody > tr > td > table.main > tbody > tr:nth-child(1) > td:nth-child(1) > p,
+table.readpost > tbody > tr:nth-child(2), table.std-content > tbody > tr > td > table.main > tbody > tr:nth-child(2) {
 	display: none !important;
 }
 
-/* tabs in browse & profile */
 li.tab a {
 	font-size: 12px;
 }
 
-/* featured torrents */
-tr.featured {
-	background-color: #2a2e35; /* Darker featured row */
+tr.featured, tr.featured td {
+	background-color: #2a2e35 !important;
 }
 #torrent-list button {
 	margin: 0 0 -2px 0;
@@ -41,19 +56,17 @@ tr.featured {
 	}
 }
 
-/* new tag */
 span.tag.new {
 	float: left;
 	margin-right: 3px;
 	margin-left: 0;
 	font-size: 9px;
 	font-weight: bold;
-	color: #ff4d4d; /* Softer red for dark theme */
+	color: #ff5555;
 	background-color: transparent;
-	border: 1px solid #ff4d4d;
+	border: 1px solid #ff5555;
 }
 
-/* discount tags */
 #torrent-list a[title^="All"],
 #torrent-list a[title^="25%"],
 #torrent-list a[title^="50%"],
@@ -67,11 +80,11 @@ span.tag.new {
 }
 #torrent-list a[title^="25%"]:after {
 	content: "75%";
-	color: #8fa1b3; /* Lighter for visibility */
+	color: #888899;
 }
 #torrent-list a[title^="50%"]:after {
 	content: "50%";
-	color: #7b97cd; /* Lighter for visibility */
+	color: #aaaabb;
 }
 #torrent-list a.fl:after,
 .table_other_copies span.fl:after,
@@ -80,7 +93,7 @@ span.tag.new {
 #table_completed span.fl:after,
 #table_incomplete span.fl:after {
 	content: "FREE!";
-	color: #6699ff; /* Brighter blue for dark background */
+	color: #dddddd;
 	font-weight: bold;
 }
 #torrent-list a[title^="25%"]:after,
@@ -98,10 +111,9 @@ span.tag.new {
 	pointer-events: none;
 }
 
-/* show page */
 #showpage {
 	padding: 2px 0 6px 0;
-	background-color: #22252b; /* Dark grayish background */
+	background-color: #22252b !important;
 	border: 1px solid #111111;
 }
 #showpage h2 {
@@ -122,11 +134,10 @@ span.tag.new {
 	font-size: 18px;
 }
 
-/* movie list page */
 .film-list-container {
 	padding: 10px 10px 0 10px;
 	margin: 2px;
-	background-color: #22252b; /* Dark grayish background */
+	background-color: #22252b !important;
 	border: 1px solid #111111;
 }
 .info_row {
@@ -134,15 +145,13 @@ span.tag.new {
 	margin: -1px;
 }
 
-/* create list page */
 #list-add-container {
 	display: table-cell;
 	padding: 5px 20px 15px 20px;
-	background-color: #22252b; /* Dark grayish background */
+	background-color: #22252b !important;
 	border: 1px solid #111111;
 }
 
-/* forum icons */
 .unlockednew,
 .unlocked,
 .lockednew,
@@ -150,19 +159,19 @@ span.tag.new {
 	width: 32px;
 	height: 32px;
 }
-.unlockednew { /* new thread */
+.unlockednew {
 	background: url('images/new.png') no-repeat scroll center center transparent;
 }
-.unlocked { /* read thread */
+.unlocked {
 	background: url('images/read.png') no-repeat scroll center center transparent;
 }
-.lockednew { /* new closed thread */
+.lockednew {
 	background: url('images/locked-new.png') no-repeat scroll center center transparent;
 }
-.locked { /* closed thread */
+.locked {
 	background: url('images/locked.png') no-repeat scroll center center transparent;
 }
-.hasposted:after { /* thread marker */
+.hasposted:after {
 	content: url("images/marker.png");
 	height: 10px;
 	left: 24px;
@@ -171,7 +180,6 @@ span.tag.new {
 	width: 10px;
 }
 
-/* disabled, warned and donor icons */
 img[src="pic/disabledbig.gif"],
 img[src="pic/warnedbig.gif"],
 img[src="pic/starbig.gif"] {
@@ -217,7 +225,6 @@ img[src="pic/star.gif"],
 	background: url("images/donor.png");
 }
 
-/* some more icons */
 .searchicon {
 	width: 16px;
 	height: 16px;
@@ -225,6 +232,7 @@ img[src="pic/star.gif"],
 	margin-right: -2px;
 	background-position: 0px;
 	background-image: url("images/search.png");
+	filter: grayscale(100%);
 }
 
 .inbox,
@@ -276,10 +284,6 @@ img[src="/pic/top.gif"] {
 	background: transparent url("https://i.imgur.com/xXkS8R7.png") no-repeat scroll left center;
 }
 
-
-/* here we go with the header mod */
-
-/* site header */
 body > table:first-of-type {
 	position: fixed;
 	top: 0;
@@ -287,12 +291,13 @@ body > table:first-of-type {
 	z-index: 2;
 	height: 60px;
 	margin: 0 !important;
-	background-color: rgba(34, 37, 43, 0.95); /* Dark transparent header */
+	background-color: rgba(22, 24, 29, 0.98) !important;
 }
 #logo {
 	background: no-repeat 2px 0/361px url("https://i.imgur.com/goJrQAY.png") !important;
 	width: 363px !important;
 	height: 60px !important;
+	filter: grayscale(100%);
 }
 body > table:first-of-type #sitesearch {
 	text-align: center;
@@ -307,7 +312,7 @@ body > table:first-of-type #sitesearchform {
 	position: fixed !important;
 	top: 47px !important;
 	background-color: #22252b !important;
-	color: #ccc !important;
+	color: #cccccc !important;
 }
 body > table:first-of-type .embedded {
 	text-align: right;
@@ -343,10 +348,9 @@ body .menu {
 	left: 0;
 	z-index: 2;
 	margin: 0;
-	background-color: #1b1d22;
+	background-color: #1a1c20 !important;
 }
 
-/* donate */
 #donate {
 	background: none;
 	width: auto;
@@ -370,7 +374,6 @@ body .menu {
 	content: url(https://i.imgur.com/zP85Qa8.png);
 }
 
-/* adjust elements below menu for fixed header */
 body > table:nth-of-type(3) > tbody > tr > td {
 	padding-top: 90px !important;
 }
@@ -379,7 +382,6 @@ body > table:nth-of-type(3) > tbody > tr > td {
 	top: 81px;
 }
 
-/* adjust anchor links for fixed header */
 a[name]:not([href]) {
 	display: block;
 	padding-top: 90px;
@@ -393,9 +395,6 @@ p.sub > a[name]:target {
 	outline: none;
 }
 
-
-/* here we go with the sidebar mod */
-
 td#sidebar-container {
 	position: fixed;
 	z-index: 1;
@@ -408,7 +407,7 @@ td#sidebar-container .main {
 	width: 175px;
 	left: -190px;
 	margin: 90px 0 10px 8px;
-	background-color: #22252b; /* Dark grayish background */
+	background-color: #22252b !important;
 	border: 1px solid #111111;
 	transition: left .15s ease;
 }
@@ -419,60 +418,55 @@ td#sidebar-container:hover .main {
 	padding: 0 5px 5px;
 }
 
-
-/* here we go with the shadows */
-
 .menu, li.tab, td.bottom > table[width="800"]:first-of-type, td.bottom > table[width="500"]:first-of-type,
 td#sidebar-container .main,
-#news > h2, #news > h2+table, body > table.menu+table.main > tbody > tr > td.bottom:last-child table.main > tbody > tr > td.embedded > h2, body > table.menu+table.main > tbody > tr > td.bottom:last-child table.main > tbody > tr > td.embedded > h2+table:not([class]), /* news, poll, stats, rules, staff etc */
-body > table.menu+table.main > tbody > tr > td.bottom:last-child > h1:first-child+p+table[width="750"][cellpadding="10"], body > table.menu+table.main > tbody > tr > td.bottom:last-child > p+p+table[width="750"][cellpadding="10"], /* previous polls */
+#news > h2, #news > h2+table, body > table.menu+table.main > tbody > tr > td.bottom:last-child table.main > tbody > tr > td.embedded > h2, body > table.menu+table.main > tbody > tr > td.bottom:last-child table.main > tbody > tr > td.embedded > h2+table:not([class]),
+body > table.menu+table.main > tbody > tr > td.bottom:last-child > h1:first-child+p+table[width="750"][cellpadding="10"], body > table.menu+table.main > tbody > tr > td.bottom:last-child > p+p+table[width="750"][cellpadding="10"],
 td.embedded > table.main > tbody > tr > td[style="padding: 10px;background-color: #ECE9D8"],
-body > table.menu+table.main > tbody > tr > td.bottom:last-child > table.main:first-of-type+p+table.main > tbody > tr > td.embedded > table, body > table.menu+table.main > tbody > tr > td.bottom:last-child > table.main:first-of-type+table.main > tbody > tr > td.embedded > table, /* profiles */
-#tabs+table[width="800"], /* settings */
-table.tableb, /* bonus points */
-#tabs ~ form+table, td.bottom > table[width="500"]:first-of-type, /* user lists */
+body > table.menu+table.main > tbody > tr > td.bottom:last-child > table.main:first-of-type+p+table.main > tbody > tr > td.embedded > table, body > table.menu+table.main > tbody > tr > td.bottom:last-child > table.main:first-of-type+table.main > tbody > tr > td.embedded > table,
+#tabs+table[width="800"],
+table.tableb,
+#tabs ~ form+table, td.bottom > table[width="500"]:first-of-type,
 .notification-frame,
-form[action="inbox.php"] > table, body > table.menu+table.main > tbody > tr > td.bottom:last-child > h1:first-child+table[width="660"][cellpadding="4"], form[name="message"], /* messages */
-form > #searchbox, #torrent-list, html #searchcriteria, /* browse */
-.rc__film__poster, /* new film page posters */
+form[action="inbox.php"] > table, body > table.menu+table.main > tbody > tr > td.bottom:last-child > h1:first-child+table[width="660"][cellpadding="4"], form[name="message"],
+form > #searchbox, #torrent-list, html #searchcriteria,
+.rc__film__poster,
 #table_open_requests, .center_comments > table.main:only-of-type > tbody > tr > td > table,
 #tv-show-list, #tv-episode-list, #list-add-container,
 #list-container .list-description, #list-container .item,
-#offerstable, body > table.menu+table.main > tbody > tr > td.bottom:last-child > table[cellpadding="3"]:first-of-type, body > table.menu+table.main > tbody > tr > td.bottom:last-child > table[cellpadding="5"]:first-of-type, /* offers */
+#offerstable, body > table.menu+table.main > tbody > tr > td.bottom:last-child > table[cellpadding="3"]:first-of-type, body > table.menu+table.main > tbody > tr > td.bottom:last-child > table[cellpadding="5"]:first-of-type,
 #details,
 #showpage,
 .film-list-container,
-.stattitle, .banner_container .statbanner, /* tv recommendations banners */
-body > table.menu+table.main > tbody > tr > td.bottom:last-child > h1:first-child+table:last-child, /* nfo */
+.stattitle, .banner_container .statbanner,
+body > table.menu+table.main > tbody > tr > td.bottom:last-child > h1:first-child+table:last-child,
 table.std-content,
 table.sources_table, table.lottery_table, table.lottery_table2,
-td.bottom > form[action="dox.php"]+p+table, /* subtitles */
+td.bottom > form[action="dox.php"]+p+table,
 #wishlist,
-body > table.menu+table.main > tbody > tr > td.bottom:last-child > script:first-child+h1+table:last-child[cellpadding="5"], /* ignored shows */
+body > table.menu+table.main > tbody > tr > td.bottom:last-child > script:first-child+h1+table:last-child[cellpadding="5"],
 td.bottom > form[action="/log.php"] ~ table,
-body > table.menu+table.main > tbody > tr > td.bottom:last-child > table.main > tbody > tr > td.embedded > table[cellpadding="10"]:first-child, body > table.menu+table.main > tbody > tr > td.bottom:last-child > form > table, /* comments */
-body > table.menu+table.main > tbody > tr > td.bottom:last-child > h1+form[method="get"]+p+p+table[cellpadding="5"], /* users */
-#latest_posts > table, td.bottom > table+h1 ~ table:not([class]), /* forum */
-body > table.menu+table.main > tbody > tr > td.bottom:last-child > h2+table:last-of-type, /* 10 last posts under forum reply */
-body > table.main > tbody > tr > td.bottom:nth-child(2) > table:nth-child(2)[cellpadding="10"][border="1"], body > table.main > tbody > tr > td.bottom:nth-child(2) > table:nth-child(4)[cellpadding="10"][border="1"], /* bitcoin donation page */
+body > table.menu+table.main > tbody > tr > td.bottom:last-child > table.main > tbody > tr > td.embedded > table[cellpadding="10"]:first-child, body > table.menu+table.main > tbody > tr > td.bottom:last-child > form > table,
+body > table.menu+table.main > tbody > tr > td.bottom:last-child > h1+form[method="get"]+p+p+table[cellpadding="5"],
+#latest_posts > table, td.bottom > table+h1 ~ table:not([class]),
+body > table.menu+table.main > tbody > tr > td.bottom:last-child > h2+table:last-of-type,
+body > table.main > tbody > tr > td.bottom:nth-child(2) > table:nth-child(2)[cellpadding="10"][border="1"], body > table.main > tbody > tr > td.bottom:nth-child(2) > table:nth-child(4)[cellpadding="10"][border="1"],
 .invite_notice, .invite_notice+table {
-	box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7); /* Darkened shadow */
+	box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7);
 }
 
 td.embedded > table.main > tbody > tr > td[style="padding: 10px;background-color: #ECE9D8"] {
-	background-color: #22252b !important; /* Force override inline profile background */
+	background-color: #22252b !important;
 }
 
-.rc__container, .rc__toggle,  /* film tab background */
+.rc__container, .rc__toggle,
 .rc__film__poster-placeholder,
-body > table.menu+table.main > tbody > tr > td.bottom:last-child > div[style="width: 900px; text-align: left"] > div[style*="background-color: #BCCAD6;"]:first-child { /* film tab info */
+body > table.menu+table.main > tbody > tr > td.bottom:last-child > div[style="width: 900px; text-align: left"] > div[style*="background-color: #BCCAD6;"]:first-child,
+div[style*="background-color: #BCCAD6;"] {
 	border: 1px solid #111111 !important;
 	box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7);
-	background-color: #22252b !important; /* Force override inline film tab background */
+	background-color: #22252b !important; 
 }
-
-
-/* miscellaneous */
 
 #showbanner,
 .list-overview,
@@ -480,7 +474,7 @@ body > table.menu+table.main > tbody > tr > td.bottom:last-child > div[style="wi
 #tv-show-list,
 #tv-episode-list,
 img[src^="/pic/imdb_poster_cache/"] {
-	border: 1px solid #333333 !important; /* Darker border */
+	border: 1px solid #333333 !important; 
 }
 #tv-show-list {
 	width: auto;
@@ -494,7 +488,7 @@ img[src^="/pic/imdb_poster_cache/"] {
 	border-bottom: none;
 }
 
-table.readpost > tbody > tr > td > img[width="150"], table.std-content > tbody > tr > td > table.main > tbody > tr > td > img[width="150"] { /* avatars on the forum */
+table.readpost > tbody > tr > td > img[width="150"], table.std-content > tbody > tr > td > table.main > tbody > tr > td > img[width="150"] {
 	border-bottom: 1px solid #333333;
 	margin-bottom: -1px;
 }
@@ -507,26 +501,26 @@ table.readpost > tbody > tr > td > img[width="150"], table.std-content > tbody >
 	background: no-repeat url("https://i.imgur.com/h3CdlTj.png");
 }
 
-body > table.menu+table.main > tbody > tr > td.bottom:last-child > h2 { /* "No comments" under offers */
+body > table.menu+table.main > tbody > tr > td.bottom:last-child > h2 {
 	background: none;
 	border: none;
 	-webkit-margin-before: 1em;
 	padding: 11px 0 2px 0;
 }
 
-body > table.menu+table.main > tbody > tr > td.bottom:last-child > table.main > tbody > tr > td.embedded > table[cellpadding="10"]:first-child, /* comments */
-body > table.menu+table.main > tbody > tr > td.bottom:last-child > h2+table:last-of-type, /* 10 last posts under forum reply */
-body > table.main > tbody > tr > td.bottom:nth-child(2) > table:nth-child(2)[cellpadding="10"][border="1"], body > table.main > tbody > tr > td.bottom:nth-child(2) > table:nth-child(4)[cellpadding="10"][border="1"] { /* bitcoin donation page */
+body > table.menu+table.main > tbody > tr > td.bottom:last-child > table.main > tbody > tr > td.embedded > table[cellpadding="10"]:first-child,
+body > table.menu+table.main > tbody > tr > td.bottom:last-child > h2+table:last-of-type,
+body > table.main > tbody > tr > td.bottom:nth-child(2) > table:nth-child(2)[cellpadding="10"][border="1"], body > table.main > tbody > tr > td.bottom:nth-child(2) > table:nth-child(4)[cellpadding="10"][border="1"] {
 	max-width: 930px;
 }
 
-.rc__toggle { /* show more button on film tab */
+.rc__toggle {
 	line-height: 20px !important;
 	font-size: 12px !important;
 	margin-top: -1px;
 	margin-right: -2px;
-	background-color: #2a2e35;
-	color: #ccc;
+	background-color: #2a2e35 !important;
+	color: #cccccc !important;
 }
 
 .rc__film__poster-placeholder {
@@ -577,7 +571,6 @@ img[src="/pic/icon_latest_reply.gif"] {
 	margin-bottom: -1px;
 }
 
-/* poster overlay for new film page */
 .rc__overlay {
 	margin: 1px -1px -1px 1px;
 }
